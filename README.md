@@ -12,6 +12,17 @@ The directory CombinationDifferencesTests includes a set of MARVEL 2020 energy l
 
 ---
 
+
+The naming convention for papers is:
+`[last two digits of year][first 2 letters of first 4 authors].pdf`
+
+For example, a paper written in 20**15** by Alan **Ap**pleseed, John **Do**e, Peter **Pa**rker, Tony **St**ark and Bruce Wayne would be named:
+`15ApDoPaSt.pdf`
+
+The naming convention for for the final; `.txt` file is: `[paper name]-MARVEL.pdf`
+
+---
+
 The columns of the final `.txt` file are as follows:
 
 |$`\nu`$|$`\delta_1`$|$`\delta_2`$|$`\nu'_1`$|$`\nu'_2`$|$`\nu'_{3a}`$|$`\nu'_{3b}`$|$`\nu'_{4a}`$|$`\nu'_{4b}`$|$`J'`$|$`K_a'`$|$`K_c'`$|$`inv'`$|$`\nu^"_1`$|$`\nu^"_2`$|$`\nu^"_{3a}`$|$`\nu^"_{3b}`$|$`\nu^"_{4a}`$|$`\nu^"_{4b}`$|$`J^"`$|$`K_a^"`$|$`K_c^"`$|$`inv^"`$|source tag|
