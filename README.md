@@ -13,13 +13,14 @@ The directory CombinationDifferencesTests includes a set of MARVEL 2020 energy l
 ---
 
 
-The naming convention for papers is:
+The naming convention for papers is:\
 `[last two digits of year][first 2 letters of first 4 authors].pdf`
 
-For example, a paper written in 20**15** by Alan **Ap**pleseed, John **Do**e, Peter **Pa**rker, Tony **St**ark and Bruce Wayne would be named:
+For example, a paper written in 20**15** by Alan **Ap**pleseed, John **Do**e, Peter **Pa**rker, Tony **St**ark and Bruce Wayne would be named:\
 `15ApDoPaSt.pdf`
 
-The naming convention for for the final; `.txt` file is: `[paper name]-MARVEL.pdf`
+The naming convention for for the final; `.txt` file is:\
+`[paper name]-MARVEL.txt`
 
 ---
 
