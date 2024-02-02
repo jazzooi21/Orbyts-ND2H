@@ -1,5 +1,5 @@
 # MARVEL ND2H
-The purpose of this repository is to track changes throughout the application of the MARVEL procedure (Measured Active Ro-Vibrational Energy Levels) (Furtenbacher et al. 2007) to transitions of the ammonia isotopologue ND2H. The work is to be carried out with the help of sixth form students as part of the ORBYTS programme.
+The purpose of this repository is to track changes throughout the application of the MARVEL procedure (Measured Active Ro-Vibrational Energy Levels) (Furtenbacher et al. 2007) to transitions of the ammonia isotopologue ND_2H. The work is to be carried out with the help of sixth-form students as part of the ORBYTS programme.
 
 The latest online version (4.1) of MARVEL is available at: https://respecth.elte.hu/MARVEL4/index.html
 
