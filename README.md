@@ -19,7 +19,7 @@ The naming convention for papers is:\
 For example, a paper written in 20**15** by Alan **Ap**pleseed, John **Do**e, Peter **Pa**rker, Tony **St**ark and Bruce Wayne would be named:\
 `15ApDoPaSt.pdf`
 
-The naming convention for for the final; `.txt` file is:\
+The naming convention for the final `.txt` file is:\
 `[paper name]-MARVEL.txt`
 
 ---
