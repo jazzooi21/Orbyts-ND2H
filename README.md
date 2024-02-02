@@ -27,6 +27,7 @@ There are 10 quantum numbers for each state.
 
 The source tag formatting is as follows: [paper].[number]
 
+---
 
 ## References
  Furtenbacher, T; Csaszar, AG; Tennyson, J; (2007) MARVEL: measured active rotational-vibrational energy levels. J MOL SPECTROSC , 245 (2) 115 - 125  https://doi.org/10.1016/j.jms.2007.07.005
