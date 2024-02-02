@@ -12,7 +12,7 @@ The directory CombinationDifferencesTests includes a set of MARVEL 2020 energy l
 
 The columns of the final `.txt` file are as follows:
 
-|$\nu$|$\delta_1$|$\delta_2$|$\nu'_1$|$\nu'_2$|$\nu'_{3a}$|$\nu'_{3b}$|$\nu'_{4a}$|$\nu'_{4b}$|$J'$|$K_a'$|$K_c'$|$inv'$|
+|$`\nu`$|$`\delta_1`$|$`\delta_2`$|$`\nu'_1`$|$`\nu'_2`$|$`\nu'_{3a}`$|$`\nu'_{3b}`$|$`\nu'_{4a}`$|$`\nu'_{4b}`$|$`J'`$|$`K_a'`$|$`K_c'`$|$`inv'`$|
 |-----------------|-----------------|-----------------|
 | Row 1, Cell 1   | Row 1, Cell 2   | Row 1, Cell 3   |
 | Row 2, Cell 1   | Row 2, Cell 2   | Row 2, Cell 3   |
