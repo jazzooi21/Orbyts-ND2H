@@ -12,10 +12,15 @@ The directory CombinationDifferencesTests includes a set of MARVEL 2020 energy l
 
 The columns of the final `.txt` file are as follows:
 
-|$`\nu`$|$`\delta_1`$|$`\delta_2`$|$`\nu'_1`$|$`\nu'_2`$|$`\nu'_{3a}`$|$`\nu'_{3b}`$|$`\nu'_{4a}`$|$`\nu'_{4b}`$|$`J'`$|$`K_a'`$|$`K_c'`$|$`inv'`$|$`\nu"_1`$|$`\nu"_2`$|$`\nu"_{3a}`$|$`\nu"_{3b}`$|$`\nu"_{4a}`$|$`\nu"_{4b}`$|$`J"`$|$`K_a"`$|$`K_c"`$|$`inv"`$|
+|$`\nu`$|$`\delta_1`$|$`\delta_2`$|$`\nu'_1`$|$`\nu'_2`$|$`\nu'_{3a}`$|$`\nu'_{3b}`$|$`\nu'_{4a}`$|$`\nu'_{4b}`$|$`J'`$|$`K_a'`$|$`K_c'`$|$`inv'`$|$`\nu^"_1`$|$`\nu^"_2`$|$`\nu^"_{3a}`$|$`\nu^"_{3b}`$|$`\nu^"_{4a}`$|$`\nu^"_{4b}`$|$`J^"`$|$`K_a^"`$|$`K_c^"`$|$`inv^"`$|source tag|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 
-
+$`\nu`$ indicates transition frequency.
+$`\delta_1=\delta_2`$ is the transition uncertainty (include twice due to quirk in MARVEL).
+Single prime $`'`$ denotes the higher/upper state energy.
+Double prime $`^"`$ denotes the lower state energy.
+There are 10 quantum numbers for each state.
+The source tag formatting is as follows: [paper].[number]
 
 
 ## References
