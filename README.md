@@ -11,7 +11,12 @@ This project also includes a number of directories. Most are divided to be stagi
 The directory CombinationDifferencesTests includes a set of MARVEL 2020 energy levels called 14NH3-MarvelEnergies-2020.txt. These are used by the script CombinationDifferences.py, which reads the previous Marvel-14NH3-2020.txt file and appends the new transitions from their respective directories, to apply combination differences tests using the previous MARVEL energy levels as lower states. The script also contains a Python list of source tags called `transitionsToRemove`, which are transitions that we have manually found to be inconsistent through the combination differences procedure or other means of validation. These transitions are invalidated i.e. a minus sign is put in front of the transition frequency. The script concludes by printing the resulting MARVEL transition set in order of ascending transition frequency into the Marvel-14NH3-Main.txt file (it is overwritten upon each run).  -->
 
 The columns of the final `.txt` file are as follows:
+
 |$\nu$|$\delta_1$|$\delta_2$|$\nu'_1$|$\nu'_2$|$\nu'_{3a}$|$\nu'_{3b}$|$\nu'_{4a}$|$\nu'_{4b}$|$J'$|$K_a'$|$K_c'$|$inv'$|
+|-----------------|-----------------|-----------------|
+| Row 1, Cell 1   | Row 1, Cell 2   | Row 1, Cell 3   |
+| Row 2, Cell 1   | Row 2, Cell 2   | Row 2, Cell 3   |
+| Row 3, Cell 1   | Row 3, Cell 2   | Row 3, Cell 3   |
 
 
 
