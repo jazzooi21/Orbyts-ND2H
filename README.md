@@ -16,10 +16,15 @@ The columns of the final `.txt` file are as follows:
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 
 $`\nu`$ indicates transition frequency.
+
 $`\delta_1=\delta_2`$ is the transition uncertainty (include twice due to quirk in MARVEL).
+
 Single prime $`'`$ denotes the higher/upper state energy.
+
 Double prime $`^"`$ denotes the lower state energy.
+
 There are 10 quantum numbers for each state.
+
 The source tag formatting is as follows: [paper].[number]
 
 
