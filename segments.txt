@@ -1,3 +1,4 @@
 22CaDiFuTa cm-1
 06EnMuBrPa cm-1
 51WeSt MHz
+64LiGaDe MHz
