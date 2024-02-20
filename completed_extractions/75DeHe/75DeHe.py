@@ -1,6 +1,6 @@
 import pandas as pd
 
-df_raw = pd.read_csv(r"c:\Users\jazzo\Desktop\academics\work\ORBYTS\data\75DeHe\75DeHe.csv", dtype = str)
+df_raw = pd.read_csv(r"completed_extractions\75DeHe\75DeHe.csv", dtype = str)
 
 df_output = pd.DataFrame(columns=["nu", "unc", "unc2", "n1'", "n2'", "n3'", "n4'", "n5'", "n6'", "J'", "Ka'", "Kc'", "inv'", "n1\"", "n2\"", "n3\"", "n4\"", "n5\"", "n6\"", "J\"", "Ka\"", "Kc\"", "inv\"", "Source"])
 
@@ -75,6 +75,6 @@ print(df_output)
 
 df_str = df_output.to_string(header=False, index=False)
 
-marvelFile = r"c:\Users\jazzo\Desktop\academics\work\ORBYTS\data\75DeHe\75DeHe-MARVEL.txt"
+marvelFile = r"completed_extractions\75DeHe\75DeHe-MARVEL.txt"
 with open(marvelFile, "w+") as FileToWriteTo:
     FileToWriteTo.write(df_str)
