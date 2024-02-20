@@ -2,3 +2,4 @@
 06EnMuBrPa cm-1
 51WeSt MHz
 64LiGaDe MHz
+75DeHe MHz
