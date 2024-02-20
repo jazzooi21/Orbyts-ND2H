@@ -1,6 +1,3 @@
-No uncertainties given, so uncertainties are based on
-the quoted precision of the transition frequencies ie 0.1 MHz.
-Inversion symmetry not given but two frequencies are given for each rotational
-quantum number, the largest frequency of which is taken to be the one where the 
-inversion symmetry of the upper state is antisymmetric (later labelled sources are
-used to double-check)
+No uncertainties given, so uncertainties are based on the quoted precision of the transition frequencies ie 0.1 MHz.
+Inversion symmetry not given but two frequencies are given for each rotational quantum number, the largest frequency of which is taken to be the one where the inversion symmetry of the upper state is antisymmetric
+(later labelled sources are used to double-check)
