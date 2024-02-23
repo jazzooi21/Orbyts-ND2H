@@ -6,12 +6,13 @@ columnNames = ["nu", "unc", "unc2", "n1'", "n2'", "n3'", "n4'", "n5'", "n6'",
     "J'", "Ka'", "Kc'", "inv'", "n1\"", "n2\"", "n3\"", "n4\"", "n5\"", "n6\"", 
     "J\"", "Ka\"", "Kc\"", "inv\"", "Source"]
 
-transitions = pd.read_csv("75DeHe-MARVEL-SymmetryAssigned.txt", delim_whitespace=True, names=columnNames)
+transitions = pd.read_csv("75DeHe-MARVEL-OLD.txt", delim_whitespace=True, names=columnNames)
 
 transitions["Rotational Tag"] = (transitions["J'"].astype(str) + "-" + transitions["Ka'"].astype(str) + 
         "-" + transitions["Ka'"].astype(str) + "-" + transitions["J\""].astype(str) + "-" + 
         transitions["Ka\""].astype(str) + "-" + transitions["Kc\""].astype(str))
 
+# Sort transitions in terms of their pairs and then within those pairs by the transition frequency
 transitions.sort_values(by=["Rotational Tag", "nu"])
 
 def isEven(value):
@@ -20,6 +21,7 @@ def isEven(value):
     else:
         return "o"
 
+# Symmetry mapping from Bunker and Jensen 1998
 rotationalSymmetryMap = {
     "ee": "A1",
     "oo": "A2",
@@ -27,6 +29,7 @@ rotationalSymmetryMap = {
     "oe": "B2"
 }
 
+# C2V(M) Group multiplication table
 groupMultiplicationTable = {}
 groupMultiplicationTable["A1"] = {"A1": "A1", "A2": "A2", "B1": "B1", "B2": "B2"}
 groupMultiplicationTable["A2"] = {"A1": "A2", "A2": "A1", "B1": "B2", "B2": "B1"}
@@ -40,6 +43,7 @@ symmetrySelectionRules = {
     "B2": "B1"
 }
 
+# Symmetry assignments for inversion states
 inversionSymmetryMapping = {
     "A1": "s",
     "B1": "a"
@@ -61,12 +65,14 @@ def findPossibleInversionQuantumNumbers(row, isEven, rotationalSymmetryMap, grou
     row["Gamma2Inv\""] = groupMultiplicationTable[row["Gamma2\""]][row["GammaRotational\""]]
     row["inv2\""] = inversionSymmetryMapping[row["Gamma2Inv\""]]
     # Determine which of the two branches is the upper and lower component
-    if row["inv1'"] == row["inv1\""]:
+    if row["inv1'"] == row["inv1\""]: 
+        # Case for no change in inversion state ie a -> a
         row["invLower'"] = row["inv1'"]
         row["invLower\""] = row["inv1\""]
         row["invUpper'"] = row["inv2'"]
         row["invUpper\""] = row["inv2\""]
-    else:
+    else: 
+        # Case for change in inversion state ie a -> s
         row["invUpper'"] = row["inv1'"]
         row["invUpper\""] = row["inv1\""]
         row["invLower'"] = row["inv2'"]
@@ -78,6 +84,8 @@ print("\n")
 print(transitions.head(20).to_string(index=False, header=False))
 # transitions.groupby("Rotational Tag")
 
+# Here we just number all transitions in order. Since they are ordered by rotational assignment
+# then by frequency. The lower component shall always be even and upper always odd.
 transitions["Branch"] = [i for i in range(len(transitions))]
 def selectBranch(row, isEven):
     if isEven(row["Branch"]) == "o":
@@ -87,13 +95,6 @@ def selectBranch(row, isEven):
         row["inv'"] = row["invLower'"]
         row["inv\""] = row["invLower\""]
     return row
-
-# def assignInversionQuantumNumbers(dataFrame, selectBranch):
-#     dataFrame["Branch"] = [i for i in range(len(dataFrame))]
-#     print("\n")
-#     print(dataFrame.to_string(index=False, header=False))
-#     dataFrame = dataFrame.apply(lambda x:selectBranch(x))
-#     return dataFrame
 
 transitions = transitions.parallel_apply(lambda x: selectBranch(x, isEven), result_type="expand", axis=1)
 transitions = transitions[columnNames]
