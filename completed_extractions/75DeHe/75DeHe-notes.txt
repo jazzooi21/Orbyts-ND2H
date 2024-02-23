@@ -1,3 +1,45 @@
 No uncertainties given, so uncertainties are based on the quoted precision of the transition frequencies ie 0.1 or 0.01 MHz.
 Inversion symmetry not given but two frequencies are given for each rotational quantum number, the largest frequency of which is taken to be the one where the inversion symmetry of the upper state is antisymmetric
 (Alex will double-check inv quantum numbers at some point)
+
+Symmetry assigned matching uses the table from Bunker and Jensen 1998 for water. It describes 
+how to assign the symmetry based on the asymmetric top quantum numbers. It is as follows:
+
+Ka Kc Gamma
+e  e   A1
+o  o   A2
+e  o   B1
+o  e   B2
+
+The symmetric inversion state has an irreducible representation A1 whereas the antisymmetric 
+inversion state has an irreducible representation B1. Multiplying these together in the C2v(M)
+multiplication table yields the total symmetry. 
+
+First the rotational symmetry for each set of asymmetric top quantum numbers is determined. 
+Then we consider two cases: one where the upper state starts in the antisymmetric a state and
+the other where the upper state is symmetric with respect to inversion. The total symmetry
+of each case is then determined. Symmetry selection rules (A1 <-> A2 and B1 <-> B2) then determine 
+the total symmetry of the lower state which in turn informs us as to what the resulting lower 
+state inversion should be. 
+
+Attributing these two cases to the upper and lower component is not entirely without ambiguity. 
+First, an attempt was made to assign the B1 <-> B2 branch to the upper component. This however 
+proved less reliable than the intial procedure of assuming a -> s (where a is the upper state) 
+for the upper component and then the opposite for the lower component. We return to this assumption
+but also factor in the case where no change of inversion state takes place ie a -> a and s -> s.
+In this case, comparing a few transitions with those in 22CaDiFuTa suggests that the lower component
+would be the a -> a state and s -> s the upper component. 
+
+To compare, we match the proposed inversion assignments to those already given in 22CaDiFu. Not all
+transitions have a corresponding transition given in the more recent paper but if at least one of the 
+components has a match then the validity of the assignment for the other component can in turn be
+determined. Listed here are transitions that were flagged as not matching and so their assignments had to 
+be swapped:
+
+75DeHe.15
+75DeHe.16
+
+75DeHe.33 (fixed scanning error in transition frequency)
+
+Obviously, for those pairs where neither transition had a match, we cannot say for certain whether 
+these tentative inversion assignments are correct. 

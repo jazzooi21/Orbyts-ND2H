@@ -6,7 +6,7 @@ columnNames = ["nu", "unc", "unc2", "n1'", "n2'", "n3'", "n4'", "n5'", "n6'",
     "J'", "Ka'", "Kc'", "inv'", "n1\"", "n2\"", "n3\"", "n4\"", "n5\"", "n6\"", 
     "J\"", "Ka\"", "Kc\"", "inv\"", "Source"]
 
-transitions = pd.read_csv("75DeHe-MARVEL-OLD.txt", delim_whitespace=True, names=columnNames)
+transitions = pd.read_csv("75DeHe-MARVEL-SymmetryAssigned.txt", delim_whitespace=True, names=columnNames)
 
 transitions["Rotational Tag"] = (transitions["J'"].astype(str) + "-" + transitions["Ka'"].astype(str) + 
         "-" + transitions["Ka'"].astype(str) + "-" + transitions["J\""].astype(str) + "-" + 
@@ -55,22 +55,22 @@ def findPossibleInversionQuantumNumbers(row, isEven, rotationalSymmetryMap, grou
     row["Gamma1Inv\""] = groupMultiplicationTable[row["Gamma1\""]][row["GammaRotational\""]]
     row["inv1\""] = inversionSymmetryMapping[row["Gamma1Inv\""]]
     # Repeat assuming branch with upper inv state s
-    row["inv2'"] = "a"
+    row["inv2'"] = "s"
     row["Gamma2'"] = groupMultiplicationTable[row["GammaRotational'"]]["A1"]
     row["Gamma2\""] = symmetrySelectionRules[row["Gamma2'"]] 
     row["Gamma2Inv\""] = groupMultiplicationTable[row["Gamma2\""]][row["GammaRotational\""]]
     row["inv2\""] = inversionSymmetryMapping[row["Gamma2Inv\""]]
-    # Determine which of the two branches is the B branch
-    if row["Gamma1'"] == "B1" or row["Gamma1'"] == "B2":
-        row["invB'"] = row["inv1'"]
-        row["invB\""] = row["inv1\""]
-        row["invA'"] = row["inv2'"]
-        row["invA\""] = row["inv2\""]
+    # Determine which of the two branches is the upper and lower component
+    if row["inv1'"] == row["inv1\""]:
+        row["invLower'"] = row["inv1'"]
+        row["invLower\""] = row["inv1\""]
+        row["invUpper'"] = row["inv2'"]
+        row["invUpper\""] = row["inv2\""]
     else:
-        row["invA'"] = row["inv1'"]
-        row["invA\""] = row["inv1\""]
-        row["invB'"] = row["inv2'"]
-        row["invB\""] = row["inv2\""]
+        row["invUpper'"] = row["inv1'"]
+        row["invUpper\""] = row["inv1\""]
+        row["invLower'"] = row["inv2'"]
+        row["invLower\""] = row["inv2\""]
     return row
 
 transitions = transitions.parallel_apply(lambda x:findPossibleInversionQuantumNumbers(x, isEven, rotationalSymmetryMap, groupMultiplicationTable, symmetrySelectionRules, inversionSymmetryMapping), result_type="expand", axis=1)
@@ -81,11 +81,11 @@ print(transitions.head(20).to_string(index=False, header=False))
 transitions["Branch"] = [i for i in range(len(transitions))]
 def selectBranch(row, isEven):
     if isEven(row["Branch"]) == "o":
-        row["inv'"] = row["invB'"]
-        row["inv\""] = row["invB\""]
+        row["inv'"] = row["invUpper'"]
+        row["inv\""] = row["invUpper\""]
     else: 
-        row["inv'"] = row["invA'"]
-        row["inv\""] = row["invA\""]
+        row["inv'"] = row["invLower'"]
+        row["inv\""] = row["invLower\""]
     return row
 
 # def assignInversionQuantumNumbers(dataFrame, selectBranch):
@@ -100,7 +100,7 @@ transitions = transitions[columnNames]
 
 transitions = transitions.to_string(header=False, index=False)
 
-marvelFile = "75DeHe-MARVEL.txt"
+marvelFile = "75DeHe-MARVEL-SymmetryAssigned.txt"
 with open(marvelFile, "w+") as FileToWriteTo:
     FileToWriteTo.write(transitions)
 
