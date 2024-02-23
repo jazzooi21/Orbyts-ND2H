@@ -8,6 +8,7 @@ columnNames = ["nu", "unc", "unc2", "n1'", "n2'", "n3'", "n4'", "n5'", "n6'",
 # transitionsDeHe = pd.read_csv("75DeHe-MARVEL.txt", delim_whitespace=True, names=columnNames)
 transitionsDeHe = pd.read_csv("75DeHe-MARVEL-SymmetryAssigned.txt", delim_whitespace=True, names=columnNames)
 transitionsCaDiFuTa = pd.read_csv("../22CaDiFuTa/22CaDiFuTa-MARVEL.txt", delim_whitespace=True, names=columnNames)
+# transitionsCaDiFuTa = pd.read_csv("../06EnMuBrPa/06EnMuBrPa-MARVEL.txt", delim_whitespace=True, names=columnNames)
 print(transitionsDeHe.to_string(index=False))
 def generateTag(row):
     row["Tag"] = (str(row["J'"]) + "-" + str(row["Ka'"]) + "-" + str(row["Kc'"]) 

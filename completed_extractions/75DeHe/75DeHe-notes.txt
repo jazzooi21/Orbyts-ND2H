@@ -41,5 +41,5 @@ be swapped:
 
 75DeHe.33 (fixed scanning error in transition frequency)
 
-Obviously, for those pairs where neither transition had a match, we cannot say for certain whether 
-these tentative inversion assignments are correct. 
+Then matching to 06EnMuBrPa for the pairs for which no match was found confirms that these assignments 
+also look reasonable
