@@ -5,3 +5,4 @@
 75DeHe MHz
 88FuDiJoHa cm-1
 88KaSiJoKa cm-1
+06SnHoQu cm-1
