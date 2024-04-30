@@ -3,4 +3,4 @@
 51WeSt MHz
 64LiGaDe MHz
 75DeHe MHz
-88FuDiJo cm-1
+88FuDiJoHa cm-1
