@@ -4,3 +4,4 @@
 64LiGaDe MHz
 75DeHe MHz
 88FuDiJoHa cm-1
+88KaSiJoKa cm-1
