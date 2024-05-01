@@ -3,3 +3,6 @@
 51WeSt MHz
 64LiGaDe MHz
 75DeHe MHz
+88KaSiJoKa cm-1
+88FuDiJoHa cm-1
+06SnHoQu cm-1
