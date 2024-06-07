@@ -1,4 +1,4 @@
- nu1  nu2  nu3a  nu3b  nu4a  nu4b  J  Ka  Kc inv      E/CM-1        E/Mhz
+ nu1  nu2  nu3a  nu3b  nu4a  nu4b  J  Ka  Kc inv      E"        E/Mhz
    0    0     0     0     0     0  0   0   0   s    0.000000         0.00
    0    0     0     0     0     0  0   0   0   a    0.170745      5118.81
    0    0     0     0     0     0  1   0   1   s    9.097058    272722.90
