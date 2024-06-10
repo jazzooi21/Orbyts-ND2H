@@ -115,15 +115,37 @@ transitionsToCorrect = {
     "88FuDiJoHa.756": 0.9527156,
     "88FuDiJoHa.769": 2.3209923,
     "88FuDiJoHa.818": 12.787276,
+    "86CoVaHe.281": 808.31255,
+    "88FuDiJoHa.214": 80.666410,
+    "88FuDiJoHa.216": 80.861190,
+    "88FuDiJoHa.274": 100.835910,
+    "88FuDiJoHa.273": 100.835910,
+    "88FuDiJoHa.294": 109.825480,
+    "88FuDiJoHa.319": 118.979720,
+    "88KaSiJoKa.2": 869.41080,
 }
 
 # Transitions to reassign in format (Source Tag: [New Upper State Tag, New Lower State Tag])
 # Reassignments marked with a # are considered potentially dubious
 transitionsToReassign = {
-    "06SnHoQu.430" : ["0-0-0-0-1-0-10-1-9-s", None],
-    "06SnHoQu.411" : ["0-0-0-0-1-0-9-1-9-s", None],
+    # "06SnHoQu.430" : ["0-0-0-0-1-0-10-1-9-s", None],
+    # "06SnHoQu.411" : ["0-0-0-0-1-0-9-1-9-s", None],
+    # "06SnHoQu.108" : ["0-0-0-0-0-1-2-1-1-a", None],
+    "06SnHoQu.232" : ["0-0-0-0-0-1-5-4-2-s", None],
+    "06SnHoQu.233" : ["0-0-0-0-0-1-5-4-2-s", None],
     "88FuDiJoHa.409" : ["0-0-0-0-0-0-11-8-4-a", None],
     "88FuDiJoHa.752" : ["0-0-0-0-0-0-16-6-11-a", "0-0-0-0-0-0-16-5-11-s"],
+    "86CoVaHe.57" : [None, "0-0-0-0-0-0-4-4-0-s"],
+    "86CoVaHe.161" : [None, "0-0-0-0-0-0-4-4-0-s"],
+    "86CoVaHe.36": [None, "0-0-0-0-0-0-6-2-4-s"],
+    "86CoVaHe.158": [None, "0-0-0-0-0-0-5-3-3-s"],
+    "88KaSiJoKa.29": [None, "0-0-0-0-0-0-6-6-1-s"],
+    "86CoVaHe.793": [None, "0-0-0-0-0-0-7-2-6-s"],
+    "86CoVaHe.599": ["0-1-0-0-0-0-9-6-4-a", None],
+    "88KaSiJoKa.79": [None, "0-0-0-0-0-0-10-7-4-a"],
+    "88KaSiJoKa.80": [None, "0-0-0-0-0-0-10-7-3-s"],
+    "88KaSiJoKa.66": [None, "0-0-0-0-0-0-10-7-4-a"],
+    "88KaSiJoKa.67": [None, "0-0-0-0-0-0-10-7-3-s"],
 }
 
 badLines = pd.read_csv("BadLines.txt", delim_whitespace=True)
@@ -136,7 +158,7 @@ print("Done!")
 # Filtering
 Jupper = 16
 transitions = allTransitions[allTransitions["nu"] > 0]
-transitions = transitions[transitions["J'"] == Jupper]
+# transitions = transitions[transitions["J'"] == Jupper]
 print(transitions.head(20).to_string(index=False))
 
 def assignStateTags(row):
